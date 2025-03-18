@@ -21,9 +21,15 @@ from posts import views
 urlpatterns = [
     path('admin/', admin.site.urls), # 이거 때문에 django 관리자 페이지 들어갈 수 있음.
     path('index/', views.index),
+    # Read(1)
     path('posts/<int:id>/', views.detail),
+    # Create
     path('posts/new/', views.new),
     path('posts/create/', views.create),
-
+    # Delete
+    path('posts/<int:id>/delete/', views.delete), # post의 1번을 지워주세요
+    #update(r이랑 c 합쳐놓은 것이라 생각하면됌)
+    path('posts/<int:id>/edit/', views.edit),
+    path('posts/<int:id>/update/', views.update),
 
 ]
