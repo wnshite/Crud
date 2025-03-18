@@ -22,5 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls), # 이거 때문에 django 관리자 페이지 들어갈 수 있음.
     path('index/', views.index),
     path('posts/<int:id>/', views.detail),
+    path('posts/new/', views.new),
+    path('posts/create/', views.create),
+
 
 ]
