@@ -19,7 +19,7 @@ from django.urls import path
 from posts import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls), # 이거 때문에 django 관리자 페이지 들어갈 수 있음.
     path('index/', views.index),
-    
+
 ]
